@@ -143,7 +143,7 @@ def main():
         desired_columns = ["name", "RA", "DEC", "nbstars07", "r50"]
 
         min_stars = int(input("Plase enter the minimun number of stars: "))
-        max_radii = float(input("Please enter the maximum radius for half of the stars (in arcmin) :"))
+        max_radii = float(input("Please enter the maximum radius for half of the stars (in arcmin): "))
 
         max_radii /= 60
 
