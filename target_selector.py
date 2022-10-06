@@ -122,7 +122,7 @@ def main():
         desired_columns = ["name", "RA", "DEC", "magMax", "VarType", "Period", "Amplitude"] 
 
         mag_cut = float(input("Please enter the maximum magnitude: "))
-        amp_cut = float(input("Please enter the minimun amplitude (in mag): "))
+        amp_cut = float(input("Please enter the minimum amplitude (in mag): "))
         period_cut = float(input("Please enter the maximum period (in days): "))
         
         FILTERS = [
@@ -142,7 +142,7 @@ def main():
         FILE = "cantat-gaudin_2020.tsv"
         desired_columns = ["name", "RA", "DEC", "nbstars07", "r50"]
 
-        min_stars = int(input("Plase enter the minimun number of stars: "))
+        min_stars = int(input("Please enter the minimum number of stars: "))
         max_radii = float(input("Please enter the maximum radius for half of the stars (in arcmin): "))
 
         max_radii /= 60
@@ -167,7 +167,10 @@ def main():
     print(result)
 
     print("\n\n RESULT - Catserver friendly \n\n")
-    print(result.name.str.strip().str.replace(" ", "_") + " " + result.RA.astype(str) + " " + result.DEC.astype(str))
+    cat = (result.name.str.strip().str.replace(" ", "_") + " " + result.RA.astype(str) + " " + result.DEC.astype(str))
+
+    for i in cat:
+        print(i)
 
 
 if __name__ == "__main__":
