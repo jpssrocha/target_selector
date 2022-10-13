@@ -106,8 +106,8 @@ def main():
     """
     Please select the kind of target:
 
-    1. Variable star
-    2. Stellar cluster
+    1. Variable star (GCVS 5.1)
+    2. Stellar cluster (Cantat-Gaudin+2020)
 
     """
     )
