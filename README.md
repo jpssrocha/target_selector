@@ -24,14 +24,24 @@ $ conda install --file requirements.txt
 
 ## Known bugs
 
+### Start and end of the night selections can get exchanged
+
 This is a simple script script, therefore does not contain safe guards to take
 into consideration the cyclical nature of this task (that 24h = 0h). So
 sometimes this will make the script give targets on the first half of the night
 when asked for targets on the second half and vice versa.
 
-> Therefore ALWAYS CHECK with the visibility plot.
+> **Therefore ALWAYS CHECK with the visibility plot**
+
+### Output columns getting mixed up
+
+This happens when the terminal font is too large for the table to be rendered
+on the available columns.
+
+Is this case simply decrease the font size and run again.
 
 ## References
 
 - Cantat-Gaudin+, 2020 -> For a catalog of open clusters
 - Samus+, 2017 -> For a catalog of field variable stars (GCVS 5.1)
+- ESA, 1997, The Hipparcos and Tycho Catalogues, ESA SP-1200 -> For neighbor checking
